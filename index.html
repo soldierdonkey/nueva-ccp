@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #data {
+            position: relative;
+            border: 1px solid black;
+            width: 686px;
+            left: 20px;
+            top: 70px;
+        }
+        .box {
+            border: 1px solid black;
+            width: 300px;
+            position: relative;
+            height: 20px;
+            padding: 10px;
+        }
+        .l {
+            left: 0px;
+        }
+        .r {
+            left: 322px;
+            top: -42px;
+        }
+        .rr {
+            left: 644px;
+            top: -84px;
+            border: 1px solid black;
+            width: 30px;
+            position: relative;
+            height: 30px;
+            padding: 5px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+        .n {
+            background-color: red;
+        }
+        .y {
+            background-color: green;
+        }
+        .row {
+            height: 42px;
+        }
+        #input {
+            position: relative;
+            left: 50px;
+            top: 70px;
+        }
+        label {
+            position: relative;
+            top: -17px;
+            left: -25px;
+            padding: 0px;
+            margin: 0px;
+        }
+        input {
+            height: 50px;
+            width: 50px;
+            padding: 0px;
+            margin: 0px;
+        }
+        #START {
+            background-color: black;
+            opacity: 0.5;
+            text-align: center;
+            vertical-align: 50%;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 998;
+        }
+        #START-TEXT {
+            opacity: 2;
+            color: rgb(255, 255, 255);
+            font-size: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 999;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+        #time {
+            --progress-color: rgb(0, 0, 0);
+        }
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 50px;
+            background: #bbbbbb;
+            outline: none;
+            position: fixed;
+            z-index: 997;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 50px;
+            height: 50px;
+            background: var(--progress-color);
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 50px;
+            height: 50px;
+            background: var(--progress-color);
+            cursor: pointer;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Quickmatch</title>
+</head>
+<body>
+    <div id="START"><span id="START-TEXT">CLICK TO START<span></div>
+    <input type="range" class="slider" min="0" max="15000" value="15000" class="slider" id="time">
+    <div id="data">
+        <div class="row"><div class="box l"><b>Compound name</b></div><div class="box r"><b>Composition with charges</b></div><div class="rr y" style="font-size: 20px; background-color: brown;"><span style="left: -2px; position: relative;">✓/X</span></div></div>
+        <div class="row"><div class="box l">Eg. Sodium Chloride</div><div class="box r">Eg. Na<sup>+</sup>Cl<sup>-</sup></div><div class="rr y">✓</div></div>
+    </div>
+    <span id="input">
+        <input type="radio" id="inp1" value="inp1" name="i">
+        <label for="inp1" id="linp1">???</label>
+        <input type="radio" id="inp2" value="inp2" name="i">
+        <label for="inp2" id="linp2">???</label>
+        <br>
+        <input type="radio" id="inp3" value="inp3" name="i">
+        <label for="inp3" id="linp3">???</label>
+        <input type="radio" id="inp4" value="inp4" name="i">
+        <label for="inp4" id="linp4">???</label>
+    </span>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
