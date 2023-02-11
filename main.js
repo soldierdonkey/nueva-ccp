@@ -373,7 +373,7 @@ function update() {
         inc-=diff
         if(inc < 1){
             game()
-            inc = 15000
+            inc = 15000 - (sucess-fails)*1000
         }
         document.getElementById("time").style.setProperty("--progress-color", `rgb(${(15000-inc)/120}, 0, 0)`)
         document.getElementById("time").value = inc
