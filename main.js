@@ -136,7 +136,6 @@ function add_inp_for_formula(a, b){
         else {
             fid = JSON.parse(JSON.stringify(id))
             do {
-                console.log("no")
                 fid.anion.count = Math.floor(Math.random()*3)+1
                 fid.cation.count = Math.floor(Math.random()*3)+1
             } while (
@@ -164,7 +163,6 @@ function add_inp_for_formula(a, b){
                 )
             )
         }
-        console.log("yes")
         comp[i].a = fid.anion.count
         comp[i].c = fid.cation.count
         let box_r = document.createElement("span")
